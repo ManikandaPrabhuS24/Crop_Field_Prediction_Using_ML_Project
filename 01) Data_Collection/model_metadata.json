@@ -1,0 +1,46 @@
+{
+  "project": "AgriYield AI",
+  "model_name": "Ridge Regression (lags only)",
+  "target": "Yield_kg_ha",
+  "numeric_features": [
+    "Yield_lag_1",
+    "Yield_lag_2",
+    "Yield_lag_3",
+    "Yield_rolling_mean_3"
+  ],
+  "categorical_features": [
+    "Area",
+    "Item"
+  ],
+  "model_input_features": [
+    "Yield_lag_1",
+    "Yield_lag_2",
+    "Yield_lag_3",
+    "Yield_rolling_mean_3"
+  ],
+  "train_year_max": 2013,
+  "validation_years": [
+    2014,
+    2018
+  ],
+  "test_years": [
+    2019,
+    2023
+  ],
+  "selection_metric": "MAE_kg_ha",
+  "validation_winner": "Ridge Regression (lags only)",
+  "test_metrics": [
+    {
+      "Model": "Previous-Year Baseline",
+      "MAE_kg_ha": 451.70292706333976,
+      "RMSE_kg_ha": 1238.2762524047992,
+      "R2": 0.8564099812471442
+    },
+    {
+      "Model": "Ridge Regression (lags only)",
+      "MAE_kg_ha": 429.00177560103225,
+      "RMSE_kg_ha": 1190.7046756878242,
+      "R2": 0.8672308172421577
+    }
+  ]
+}

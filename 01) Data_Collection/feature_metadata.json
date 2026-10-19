@@ -1,0 +1,24 @@
+{
+  "numeric_features": [
+    "Yield_lag_1",
+    "Yield_lag_2",
+    "Yield_lag_3",
+    "Yield_rolling_mean_3"
+  ],
+  "categorical_features": [
+    "Area",
+    "Item"
+  ],
+  "target": "Yield_kg_ha",
+  "train_year_max": 2013,
+  "validation_years": [
+    2014,
+    2018
+  ],
+  "test_years_reserved": [
+    2019,
+    2023
+  ],
+  "deployment_candidate": "Ridge Regression (lags only)",
+  "validation_winner": "Ridge Regression (lags only)"
+}
